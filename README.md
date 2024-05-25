@@ -29,3 +29,4 @@ Just a lazy person putting in hours of work to be more lazy...
 
 
 ## Support
+For support, create an issues ticket.
