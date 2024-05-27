@@ -27,6 +27,12 @@ class move():
         Moves the player backward.
         '''
         pyautogui.keyDown("s")
+
+    def jump() -> None:
+        '''
+        Makes the player jump.
+        '''
+        pyautogui.press("space")
     
     def stop(movement: str) -> None:
         '''
