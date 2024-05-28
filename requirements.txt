@@ -1,6 +1,2 @@
-easyocr==1.7.1
-keyboard==0.13.5
-opencv_python_headless==4.9.0.80
 PyAutoGUI==0.9.54
-screeninfo==0.8.1
 tqdm==4.66.2
