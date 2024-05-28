@@ -33,6 +33,12 @@ class move():
         Makes the player jump.
         '''
         pyautogui.press("space")
+
+    def nothing():
+        '''
+        Makes the character do nothing.
+        '''
+
     
     def stop(movement: str) -> None:
         '''

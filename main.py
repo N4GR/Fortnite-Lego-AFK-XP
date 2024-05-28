@@ -3,7 +3,7 @@ from tqdm import tqdm
 import time
 import random
 
-movements = [character.move.left, character.move.right, character.move.forward, character.move.backward]
+movements = [character.move.left, character.move.right, character.move.forward, character.move.backward, character.move.nothing]
 
 def single_movement():
     previous_movement = ""
@@ -18,7 +18,7 @@ def single_movement():
         random_key()
 
         for x in tqdm(range(random.randint(3, 10))):
-            time.sleep(1)
+            time.sleep(random.random())
             if random.randint(1, 6) == 1:
                 character.move.jump()
         
