@@ -137,8 +137,11 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 test/
 launching/convert.py
+=======
+>>>>>>> parent of fc66efc (Added creating game functionality.)
 =======
 >>>>>>> parent of fc66efc (Added creating game functionality.)
