@@ -2,10 +2,16 @@ import character
 from tqdm import tqdm
 import time
 import random
+import keyboard
+import os
+
+import launching.launch_lego
 
 movements = [character.move.left, character.move.right, character.move.forward, character.move.backward]
 
 def single_movement():
+    launching.launch_lego.main()
+
     previous_movement = ""
 
     while True:
@@ -18,6 +24,10 @@ def single_movement():
         random_key()
 
         for x in tqdm(range(random.randint(3, 10))):
+            if keyboard.is_pressed("q"):
+                print("Quitting program...")
+                os._exit(0)
+
             time.sleep(1)
             if random.randint(1, 6) == 1:
                 character.move.jump()

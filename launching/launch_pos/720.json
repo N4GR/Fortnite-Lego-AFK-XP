@@ -1,0 +1,18 @@
+{
+    "search_button": [113, 43], 
+    "search_box": [600, 131], 
+    "lego_fortnite": [196, 343], 
+    "select_button": [183, 600], 
+    
+    "select_world": [170, 513], 
+    
+    "create_world": [425, 280], 
+    "create_button": [962, 585], 
+    
+    "create_world2": [425, 280], 
+    "create_button2": [962, 585],
+    
+    "game_mode": [687, 241], 
+    "create_button3": [962, 585], 
+    "okay": [292, 498]
+}

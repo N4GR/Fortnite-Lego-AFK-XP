@@ -136,3 +136,7 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
+
+test/
+launching/convert.py
+dump/*
