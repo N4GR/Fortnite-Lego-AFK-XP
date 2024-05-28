@@ -22,6 +22,10 @@ python main.py
 
 Since this is a macro, you won't be able to do other things on your computer while the program is running. However, you can stop the program by stopping the script or closing the terminal.
 
+#### Do you have any other macros to aid in XP?
+
+Yes, I have a macro for Fortnite Festival, working similarly randomly. It can be found here or from my GitHub profile:
+[![Festival](https://img.shields.io/badge/N4GR-Festival%20XP%20Macro-red?style=for-the-badge&logo=github&logoColor=red&logoSize=auto&labelColor=white)](https://github.com/N4GR/Fortnite-Festival-Stage-AFK-XP-Macro)
 
 ## 🚀 About Me
 Just a lazy person putting in hours of work to be more lazy...
