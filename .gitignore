@@ -138,9 +138,12 @@ poetry.toml
 pyrightconfig.json
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 test/
 launching/convert.py
+=======
+>>>>>>> parent of fc66efc (Added creating game functionality.)
 =======
 >>>>>>> parent of fc66efc (Added creating game functionality.)
 =======
