@@ -139,4 +139,3 @@ pyrightconfig.json
 
 test/
 launching/convert.py
-dump/*
