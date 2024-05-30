@@ -34,9 +34,15 @@ class move():
         '''
         pyautogui.press("space")
 
+    def punch():
+        '''
+        Makes the player punch.
+        '''
+        pyautogui.leftClick()
+
     def nothing():
         '''
-        Makes the character do nothing.
+        Makes the player do nothing.
         '''
 
     

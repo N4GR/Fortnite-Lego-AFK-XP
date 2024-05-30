@@ -3,7 +3,7 @@ from tqdm import tqdm
 import time
 import random
 
-movements = [character.move.left, character.move.right, character.move.forward, character.move.backward, character.move.nothing]
+movements = [character.move.left, character.move.right, character.move.forward, character.move.backward, character.move.nothing, character.move.punch]
 
 def single_movement():
     previous_movement = ""
