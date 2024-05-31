@@ -19,7 +19,7 @@ def single_movement():
 
         for x in tqdm(range(random.randint(3, 10))):
             time.sleep(1)
-            if random.randint(1, 6) == 1:
+            if random.randint(1, 10) == 1:
                 character.move.jump()
         
         character.move.stop(random_key.__name__)
