@@ -2,8 +2,13 @@ import character
 from tqdm import tqdm
 import time
 import random
+import keyboard
 
 movements = [character.move.left, character.move.right, character.move.forward, character.move.backward, character.move.nothing, character.move.punch]
+
+def leave():
+    if keyboard.is_pressed("q"):
+        exit()
 
 def single_movement():
     x = input("Begin the script by pressing enter.")
@@ -20,6 +25,7 @@ def single_movement():
                     key()
                 
                 for x in tqdm(range(random.randint(3, 10))):
+                    leave()
                     time.sleep(1)
                     if random.randint(1, 10) == 1:
                         character.move.jump()
@@ -36,6 +42,7 @@ def single_movement():
                 random_key()
 
                 for x in tqdm(range(random.randint(3, 10))):
+                    leave()
                     time.sleep(1)
                     if random.randint(1, 10) == 1:
                         character.move.jump()
