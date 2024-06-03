@@ -1,4 +1,7 @@
 > [!CAUTION]
+> THIS VERSION IS STILL IN DEVELOPMENT, USE THE MAIN BRANCH FOR A WORKING VERSION.
+
+> [!CAUTION]
 > Third party software is against Fortnite TOS.
 
 # Fortnite Lego AFK XP
