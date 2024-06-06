@@ -32,10 +32,26 @@ class character:
             return True
         except pyautogui.PyAutoGUIException:
             return False
-    
+        
+    def jump(self) -> bool:
+        try:
+            pyautogui.press(self.bindings["jump"])
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
+        
+    def punch(self) -> bool:
+        try:
+            pyautogui.leftClick()
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
+        
     def stop(self, movement: str) -> bool:
         try:
-            pyautogui.keyUp(movement)
+            method = getattr(character, movement)
+            binding = self.bindings[method.__name__]
+            pyautogui.keyUp(binding)
             return True
         except pyautogui.PyAutoGUIException:
             return False

@@ -2,5 +2,6 @@
     "forward": "w",
     "backward": "s",
     "left": "a",
-    "right": "d"
+    "right": "d",
+    "jump": "space"
 }

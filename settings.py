@@ -27,5 +27,3 @@ class settings:
         
         def getOptions(self) -> dict[list[int]]:
             return self.options
-        
-print(settings.options().getOptions())
