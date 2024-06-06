@@ -1,7 +1,4 @@
 > [!CAUTION]
-> THIS VERSION IS STILL IN DEVELOPMENT, USE THE MAIN BRANCH FOR A WORKING VERSION.
-
-> [!CAUTION]
 > Third party software is against Fortnite TOS.
 
 # Fortnite Lego AFK XP
@@ -9,24 +6,26 @@
 Recently, the developers at EPIC have made it so a user can no longer earn XP in Lego Fortnite if they're AFK. Previously, players had to sleep in a bed and enjoy the free XP. However, the recent update requires users to play the game to gain XP. This is where this script comes into play; it simulates a user playing the game by infinitely moving them for a random time.
 
 ## Pre-Requirements
-Once the files have been installed, open a terminal within the directory and run the following command to install the pre-required packages to move the player and generate progress bars.
+Once the files have been installed, open a terminal within the directory and run the following command to install the pre-required packages to move the player.
 ```bash
 pip install -r "requirements.txt"
 ```
 
 ## Usage/Examples
-Once the required packages are installed and in-game, you can run the script in your terminal and click on the game to begin the process.
+Once downloaded, there are two ways to launch the program - through the start.bat if you're on windows or alternatively running the python script on its own.
 
+To run the script from terminal, use the following command while inside the directory.
 ```bash
 python main.py
 ```
+Alternatively, just run the start.bat script.
 
 
 ## FAQ
 
 #### It doesn't work while I'm trying to do other things!
 
-Since this is a script that uses your keyboard and mouse, you won't be able to do other things on your computer while the program is running. However, you can stop the program by stopping the script or closing the terminal.
+For the script to function it requires the user to not be doing anything else on their system, you're required to be clicked into the game in order for the correct commands to be brought through.
 
 #### Do you have any other scripts to aid in XP?
 
