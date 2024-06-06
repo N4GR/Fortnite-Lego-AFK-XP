@@ -1,52 +1,92 @@
-import character
-from tqdm import tqdm
-import time
-import random
-import keyboard
+from character import character
+from random import randint, choice
+from time import sleep
+from log import log
 
-movements = [character.move.left, character.move.right, character.move.forward, character.move.backward, character.move.nothing, character.move.punch]
+class main:
+    def __init__(self) -> None:
+        self.player = character()
+    
+    def movement(self) -> list[object]:
+        movements = [self.player.forward, self.player.backward, self.player.left, self.player.right]
 
-def leave():
-    if keyboard.is_pressed("q"):
-        exit()
+        return movements
 
-def single_movement():
-    x = input("Begin the script by pressing enter.")
-    previous_movement = ""
+    def randomAction(self) -> tuple[int | list[object]]:
+        illegal_actions = [
+            ["left", "right"],
+            ["right", "left"],
+            ["forward", "backward"],
+            ["backward", "forward"],
+            ["left", "left"],
+            ["right", "right"],
+            ["forward", "forward"],
+            ["backward", "backward"]
+            ]
 
-    while True:
-        while True: # Ensures the movement previous movement isn't the same as the new one
-            multi = random.randint(1, 2)
+        action_time = randint(1, 10)
 
-            if multi == 2:
-                random_key = [random.choice(movements), random.choice(movements)]
+        while True:
+            actions = []
+            for x in range(randint(1, 2)):
+                actions.append(choice(self.movement()))
 
-                for key in random_key:
-                    key()
-                
-                for x in tqdm(range(random.randint(3, 10))):
-                    leave()
-                    time.sleep(1)
-                    if random.randint(1, 10) == 1:
-                        character.move.jump()
-                
-                for key in random_key:
-                    character.move.stop(key.__name__)
+            stuff = []
+            for action in actions:
+                stuff.append(action.__name__)
 
+            if stuff in illegal_actions:
+                continue
             else:
-                random_key = random.choice(movements)
-                if random_key.__name__ != previous_movement:
-                    previous_movement = random_key.__name__
-                    break
+                break
+        
+        print(log().note(f"Randomly chosen the aciton/s: {(stuff[0], stuff[1]) if len(stuff) == 2 else stuff[0]}..."))
 
-                random_key()
+        return action_time, actions
 
-                for x in tqdm(range(random.randint(3, 10))):
-                    leave()
-                    time.sleep(1)
-                    if random.randint(1, 10) == 1:
-                        character.move.jump()
-                
-                character.move.stop(random_key.__name__)
+    def start(self) -> None:
+        char = character()
 
-single_movement()
+        times_ran = 1
+
+        while True:
+            print(log().note(f"Ran {times_ran} time/s..."))
+            complete_actions = []
+            action_time, actions = self.randomAction()
+
+            for action in actions:
+                print(log().note(f"Pressing the action: {action.__name__}..."))
+                action()
+                complete_actions.append(action)
+
+            print(log().note(f"Waiting {action_time}s until next action..."))
+
+            for x in range(action_time):
+                roll = randint(1, 20)
+                if roll == 1:
+                    char.jump()
+                elif roll == 2:
+                    char.punch()
+
+                sleep(1)
+                print(log().note(f"Waiting {x + 1}/{action_time}..."))
+
+            for action in complete_actions:
+                self.player.stop(action.__name__)
+                print(log().note(f"Stopping {action.__name__}..."))
+            
+            print(log().success(f"Successfully completed actions, going again...\n"))
+
+            times_ran += 1
+
+if __name__ == "__main__":
+    start_time = 5
+
+    print(log().note(f"Program will begin in {start_time}s..."))
+    for x in range(start_time):
+        sleep(1)
+        print(log().note(f"{x + 1}/{start_time}s..."))
+
+    print(log().note(f"Beginning now...\n"))
+
+    main().start()

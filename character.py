@@ -1,61 +1,57 @@
 import pyautogui
+from settings import settings
 
-class move():
-    '''
-    Move class used to interact with the player.
-    '''
-    def left() -> None:
-        '''
-        Moves the player left.
-        '''
-        pyautogui.keyDown("a")
+class character:
+    def __init__(self) -> None:
+        self.bindings = settings.bindings().getBindings()
+
+    def forward(self) -> bool:
+        try:
+            pyautogui.keyDown(self.bindings["forward"])
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
+    
+    def backward(self) -> bool:
+        try:
+            pyautogui.keyDown(self.bindings["backward"])
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
+    
+    def left(self) -> bool:
+        try:
+            pyautogui.keyDown(self.bindings["left"])
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
         
-    def right() -> None:
-        '''
-        Moves the player right.
-        '''
-        pyautogui.keyDown("d")
-    
-    def forward() -> None:
-        '''
-        Moves the player foward.
-        '''
-        pyautogui.keyDown("w")
-
-    def backward() -> None:
-        '''
-        Moves the player backward.
-        '''
-        pyautogui.keyDown("s")
-
-    def jump() -> None:
-        '''
-        Makes the player jump.
-        '''
-        pyautogui.press("space")
-
-    def punch():
-        '''
-        Makes the player punch.
-        '''
-        pyautogui.leftClick()
-
-    def nothing():
-        '''
-        Makes the player do nothing.
-        '''
-
-    
-    def stop(movement: str) -> None:
-        '''
-        Stops the player from moving using a given movement.
-
-        movement: str (The direction to stop)
-
-        Example: stop("right")
-        '''
-
-        if movement == "left": pyautogui.keyUp("a")
-        elif movement == "right": pyautogui.keyUp("d")
-        elif movement == "forward": pyautogui.keyUp("w")
-        elif movement == "backward": pyautogui.keyUp("s")
+    def right(self) -> bool:
+        try:
+            pyautogui.keyDown(self.bindings["right"])
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
+        
+    def jump(self) -> bool:
+        try:
+            pyautogui.press(self.bindings["jump"])
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
+        
+    def punch(self) -> bool:
+        try:
+            pyautogui.leftClick()
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
+        
+    def stop(self, movement: str) -> bool:
+        try:
+            method = getattr(character, movement)
+            binding = self.bindings[method.__name__]
+            pyautogui.keyUp(binding)
+            return True
+        except pyautogui.PyAutoGUIException:
+            return False
