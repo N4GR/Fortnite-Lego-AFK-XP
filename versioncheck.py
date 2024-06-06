@@ -82,7 +82,7 @@ class versioning:
         if self.connection is False:
             return False, "connection-fail"
         
-        if get().version() != int(self.latestVersion().strip("v")):
+        if get().version() != self.latestVersion():
             return False, "different-version"
         else:
             return True, "Complete"
