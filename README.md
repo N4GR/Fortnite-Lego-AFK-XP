@@ -1,3 +1,14 @@
+<div align="center">
+  <a href="https://discord.gg/td2rJwcEkT"><img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/discord-icon.png" height="50" alt="Discord Icon"></a>
+  <img width="12"></img>
+  <a href="https://www.youtube.com/@N4GR"><img src="https://icons.iconarchive.com/icons/bokehlicia/captiva/128/web-google-youtube-icon.png" height="50" alt="YouTube Icon"></a>
+  <img width="12"></img>
+  <a href="https://ko-fi.com/n4gr"><img src="https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/61e1116779fc0a9bd5bdbcc7_Frame%206.png" height="50" alt="Ko-Fi Icon"></a>
+  <img width="12"></img>
+  <a href="https://paypal.me/n4gr"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/PayPal_Logo_Icon_2014.svg" height="50" alt="PayPal Icon"></a>
+  <img width="12"></img>
+</div>
+
 > [!CAUTION]
 > Third party software is against Fortnite TOS.
 
